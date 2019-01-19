@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     fun secondActivity(view: View){
 
         val intent = Intent(applicationContext,SecondPage::class.java)
