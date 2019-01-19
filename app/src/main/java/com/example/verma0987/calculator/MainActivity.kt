@@ -1,5 +1,6 @@
 package com.example.verma0987.calculator
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -52,6 +53,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
+    fun secondActivity(view: View){
+
+        val intent = Intent(applicationContext,SecondPage::class.java)
+        startActivity(intent)
+
+
+    }
 
 
 
