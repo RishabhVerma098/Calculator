@@ -8,15 +8,17 @@
 
     <Button
         android:id="@+id/add"
-        android:layout_width="110dp"
-        android:layout_height="0dp"
+        android:layout_width="101dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="55dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="8dp"
         android:onClick="add"
         android:text="+"
         app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="@+id/result"
-        app:layout_constraintTop_toBottomOf="@+id/num2" />
+        app:layout_constraintTop_toBottomOf="@+id/num2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/num1"
@@ -39,8 +41,8 @@
     <EditText
         android:id="@+id/num2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="75dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="273dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="78dp"
         android:ems="10"
@@ -48,7 +50,7 @@
         android:inputType="textPersonName|number"
         android:textAlignment="center"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintBottom_toTopOf="@+id/output"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/num1"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,5 +65,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/num1"
         app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="169dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="57dp"
+        android:text="for eg"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2" />
 
 </android.support.constraint.ConstraintLayout>

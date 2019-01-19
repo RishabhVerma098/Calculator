@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        output.text = commit()
     }
 
 
@@ -26,17 +27,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
-    fun commit(): Int {
+    fun commit(): String {
         println("Hello calulator")
         val a:Int = 10
         val b:Int = 9
         val c = a+b
-        return c
+        return ("For eg .. Sum of $a and $b is = $c")
     }
 
 
