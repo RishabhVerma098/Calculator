@@ -4,28 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@android:color/transparent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/mul"
+        android:layout_width="74dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="244dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="mul"
+        android:text="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/div"
+        app:layout_constraintTop_toBottomOf="@+id/num2" />
+
+    <Button
+        android:id="@+id/div"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="div"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/mul"
+        app:layout_constraintStart_toEndOf="@+id/sub"
+        app:layout_constraintTop_toBottomOf="@+id/num2"
+        app:layout_constraintVertical_bias="0.519" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="sub"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/div"
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
 
     <Button
         android:id="@+id/add"
-        android:layout_width="110dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="55dp"
-        android:layout_marginEnd="26dp"
+        android:layout_width="69dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="244dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
         android:onClick="add"
         android:text="+"
-        app:layout_constraintBottom_toTopOf="@+id/result"
-        app:layout_constraintEnd_toEndOf="@+id/result"
-        app:layout_constraintTop_toBottomOf="@+id/num2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/num1"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="177dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginBottom="229dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="63dp"
         android:ems="10"
         android:hint="First Number"
         android:inputType="textPersonName|number"
@@ -38,30 +94,30 @@
 
     <EditText
         android:id="@+id/num2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="75dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="78dp"
+        android:layout_width="150dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="85dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="63dp"
         android:ems="10"
         android:hint="Second Number"
         android:inputType="textPersonName|number"
         android:textAlignment="center"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintBottom_toTopOf="@+id/mul"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/num1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="181dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="136dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginBottom="99dp"
+        android:hint="Result "
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/num1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num1" />
 
 </android.support.constraint.ConstraintLayout>
