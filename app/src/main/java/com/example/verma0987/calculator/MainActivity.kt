@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
     }
 
 
@@ -58,7 +59,10 @@ class MainActivity : AppCompatActivity() {
     fun secondActivity(view: View){
 
         val intent = Intent(applicationContext,SecondPage::class.java)
+
+        intent.putExtra("input",result.text.toString())
         startActivity(intent)
+
 
 
     }
